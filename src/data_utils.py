@@ -17,10 +17,9 @@ def load_images_from_folder(folder, size=(128,128), grayscale=False, max_images=
         img = img.astype('float32') / 255.0  # نرمال‌سازی به بازه 0-1
         imgs.append(img)
     return np.array(imgs)
-
 # بارگذاری تصاویر
-train_folder = 'data/train'
-val_folder = 'data/validation'
+train_folder = 'data/noisy/train'
+val_folder = 'data/noisy/validation'
 
 x_train = load_images_from_folder(train_folder)
 x_val = load_images_from_folder(val_folder)
